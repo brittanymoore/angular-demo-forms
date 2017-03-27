@@ -1,0 +1,16 @@
+.vscode
+node_modules
+npm-debug.log
+
+dev
+aot
+dist
+compiled
+
+/src/**/*.js
+/src/**/*.map
+/src/**/*.ngfactory.ts
+/src/**/*.ngstyle.*
+/src/**/*.ngstyle.*
+/src/**/*.ngsummary.json
+/src/**/*.css.shim.ts

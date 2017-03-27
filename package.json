@@ -1,0 +1,45 @@
+{
+    "name": "angular-forms",
+    "version": "1.0.0",
+    "description": "angular forms demo",
+    "scripts": {
+        "build": "webpack --progress --config ./config/webpack.dev.js",
+        "build:prod": "webpack --progress --config ./config/webpack.prod.js",
+        "start": "webpack-dev-server --config ./config/webpack.dev.js --inline --progress",
+        "start:prod": "webpack-dev-server --config ./config/webpack.prod.js --inline --progress"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@angular/common": "4.0.0",
+        "@angular/compiler": "4.0.0",
+        "@angular/compiler-cli": "4.0.0",
+        "@angular/core": "4.0.0",
+        "@angular/forms": "4.0.0",
+        "@angular/platform-browser": "4.0.0",
+        "@angular/platform-browser-dynamic": "4.0.0",
+        "@angular/platform-server": "4.0.0",
+        "@angular/router": "4.0.0",
+        "core-js": "2.4.1",
+        "rxjs": "5.0.1",
+        "zone.js": "0.8.5",
+        "ie-shim": "0.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "7.0.11",
+        "@types/core-js": "0.9.39",
+        "awesome-typescript-loader": "3.0.8",
+        "angular2-template-loader": "0.6.2",
+        "typescript": "2.2.1",
+        "css-loader": "0.26.2",
+        "raw-loader": "0.5.1",
+        "to-string-loader": "1.1.5",
+        "webpack": "2.3.2",
+        "webpack-dev-server": "2.4.2",
+        "webpack-merge": "4.1.0",
+        "html-webpack-plugin": "2.28.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brittanymoore/angular-forms.git"
+    }
+}

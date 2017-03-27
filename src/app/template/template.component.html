@@ -1,0 +1,45 @@
+<h2>Template-driven Form</h2>
+
+<div>f.value: {{ f.value | json }}</div>
+<div>user: {{ user | json }},</div>
+
+<form novalidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+    <div *ngIf="f.submitted">Submitted!</div>
+
+    <label>
+        <span>Full name</span>
+        <input type="text" name="name" placeholder="Your full name" #userName="ngModel" [ngModel]="user.name" required minlength="2" />
+        <!-- optional one-way binding to set initial value -->
+        <!-- <input type="text" name="name" placeholder="Your full name" [ngModel]="user.name" /> -->
+    </label>
+
+    <div *ngIf="userName.errors?.required && userName.touched" class="error">
+        Name is required
+    </div>
+    <div *ngIf="userName.errors?.minlength && userName.touched" class="error">
+        Minimum of 2 characters
+    </div>
+
+    <div ngModelGroup="account" #userAccount="ngModelGroup">
+
+        <label>
+            <span>Email address</span>
+            <input type="email" name="email" placeholder="Your email address" [ngModel]="user.account.email" required />
+        </label>
+
+        <label>
+            <span>Confirm address</span>
+            <input type="email" name="confirm" placeholder="Confirm your email address" [ngModel]="user.account.confirm" required />
+        </label>
+
+        <div *ngIf="userAccount.invalid && userAccount.touched" class="error">
+            Both emails are required.
+        </div>
+
+    </div>
+
+    <!-- disabled while form is invalid -->
+    <button type="submit" [disabled]="f.invalid">Sign up</button>
+
+</form>
